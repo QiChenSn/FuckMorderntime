@@ -3,7 +3,8 @@
 	"package": "com.qichen.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-		"ExampleMixin"
+		"ExampleMixin",
+		"ZombifiedPiglinEntityMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

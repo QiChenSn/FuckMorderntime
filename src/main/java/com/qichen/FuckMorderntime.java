@@ -1,6 +1,8 @@
 package com.qichen;
 
+import com.qichen.command.FuckEggCommand;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,5 +22,10 @@ public class FuckMorderntime implements ModInitializer {
 		// Proceed with mild caution.
 
 		LOGGER.info("Hello Fabric world!");
+		
+		// 注册自定义命令
+		CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, environment) -> {
+			FuckEggCommand.register(dispatcher);
+		});
 	}
 }
